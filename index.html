@@ -96,11 +96,11 @@
     <div class="e-content article-entry" itemprop="articleBody">
       
         <h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><p>Let’s Encrypt为了让互联网用户过渡到使用安全的通信服务，提供域名&#x2F;泛域名证书，有效期为3个月，可以续期</p>
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>找台有Python命令的机器</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo yum -y install python3</span><br><span class="line">sudo python3 -m venv /opt/certbot/</span><br><span class="line">sudo /opt/certbot/bin/pip install --upgrade pip</span><br><span class="line">sudo /opt/certbot/bin/pip install certbot</span><br></pre></td></tr></table></figure>
-
-<h2 id="生成证书"><a href="#生成证书" class="headerlink" title="生成证书"></a>生成证书</h2><p>按照如下步骤生成和使用证书</p>
-<h3 id="生成通配符证书"><a href="#生成通配符证书" class="headerlink" title="生成通配符证书"></a>生成通配符证书</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#生成的证书</span></span><br><span class="line"><span class="comment"># -crt: /etc/letsencrypt/live/example.com/fullchain.pem</span></span><br><span class="line"><span class="comment"># -key: /etc/letsencrypt/live/example.com/privkey.pem</span></span><br><span class="line">/opt/certbot/bin/certbot certonly -d <span class="string">&quot;*.sub.example.com&quot;</span> -d <span class="string">&quot;*.example.com&quot;</span> -d <span class="string">&quot;example.com&quot;</span> --email <span class="string">&quot;wenzhengxing@gemdale.com&quot;</span> --manual --preferred-challenges dns-01 --server https://acme-v02.api.letsencrypt.org/directory --no-bootstrap</span><br><span class="line"><span class="comment"># 按回车键盘然后，根据输出的提示信息在域名处添加TXT记录，再回车键盘</span></span><br></pre></td></tr></table></figure>
+        
+          <p class="article-more-link">
+            <a href="/2023/11/16/lets-encrypt/#more">Read More</a>
+          </p>
+        
       
     </div>
     <footer class="article-footer">
